@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ChatUp</string>
+    <string name="need_account_string">Need a New Account?</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
 </resources>
