@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "697982082655",
+    "firebase_url": "https://chatup-6beca.firebaseio.com",
+    "project_id": "chatup-6beca",
+    "storage_bucket": "chatup-6beca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697982082655:android:23d6a97d75ed282a",
+        "android_client_info": {
+          "package_name": "io.github.pavanrkadave.chatup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697982082655-14coqqqlj2n5rm0jcr0jldvvujalifkr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.pavanrkadave.chatup",
+            "certificate_hash": "9cbbafb2193a2dbdefa1efcc913f769353c3586c"
+          }
+        },
+        {
+          "client_id": "697982082655-o9jj8lgtnlh231tj89c9runscmjhnmqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz7RazUpvWT2NCtx-VbEHAJhQK_vbMmx0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "697982082655-o9jj8lgtnlh231tj89c9runscmjhnmqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
