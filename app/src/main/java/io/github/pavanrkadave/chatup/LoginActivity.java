@@ -19,14 +19,18 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
+    //Toolbar for the app
     private Toolbar mLoginToolbar;
 
+    //required Edittext Fields and Buttons
     private EditText mLoginEmail;
     private EditText mLoginPassword;
     private Button mLoginButton;
 
+    //Progress Dialog for showing the loading screen
     private ProgressDialog mLoginProgress;
 
+    //Firebase auth variable.
     private FirebaseAuth mAuth;
 
     @Override
@@ -34,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Instance of firebase auth.
         mAuth = FirebaseAuth.getInstance();
 
         mLoginToolbar = (Toolbar) findViewById(R.id.login_toolbar);

@@ -6,9 +6,9 @@
     tools:context="io.github.pavanrkadave.chatup.MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/appBarLayout">
+        android:layout_height="wrap_content">
 
         <include
             android:id="@+id/main_page_toolbar"
@@ -17,7 +17,8 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/main_tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></android.support.design.widget.TabLayout>
+            android:layout_height="wrap_content"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.design.widget.TabLayout>
 
     </android.support.design.widget.AppBarLayout>
 
