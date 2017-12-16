@@ -43,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.register_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Create Account");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         mCreateBtn.setOnClickListener(new View.OnClickListener() {
