@@ -8,20 +8,26 @@
     tools:context="io.github.pavanrkadave.chatup.StartActivity">
 
     <TextView
+        android:id="@+id/welcome_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Welcome To ChatUp"
+        android:layout_centerVertical="true"
+        android:text="@string/welcome_to_chatup"
         android:textColor="@android:color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/start_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_title"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Already Have Account? Sign In!" />
+        android:layout_marginTop="128dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/already_have_account_sign_in"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/start_reg_button"
@@ -30,7 +36,9 @@
         android:layout_below="@+id/start_login_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="@string/need_account_string" />
+        android:backgroundTint="@android:color/white"
+        android:text="@string/need_account_string"
+        android:textColor="@color/colorPrimary" />
 
 
 </RelativeLayout>

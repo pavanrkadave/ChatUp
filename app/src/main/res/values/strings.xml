@@ -6,4 +6,7 @@
     <string name="password">Password</string>
     <string name="create_account">Create Account</string>
     <string name="log_out">Log Out</string>
+    <string name="welcome_to_chatup">Welcome To ChatUp</string>
+    <string name="already_have_account_sign_in">Already Have Account? Sign In!</string>
+    <string name="login">Login</string>
 </resources>
