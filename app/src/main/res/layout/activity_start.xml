@@ -23,10 +23,10 @@
     <Button
         android:id="@+id/start_login_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:layout_below="@+id/welcome_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="108dp"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/already_have_account_sign_in"
         android:textColor="@android:color/white" />
@@ -34,7 +34,7 @@
     <Button
         android:id="@+id/start_reg_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:layout_below="@+id/start_login_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
