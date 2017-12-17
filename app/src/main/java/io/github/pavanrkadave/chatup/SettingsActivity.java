@@ -203,7 +203,6 @@ public class SettingsActivity extends AppCompatActivity {
                                         Toast.makeText(SettingsActivity.this, "Error Uploading Thumbnail!",
                                                 Toast.LENGTH_SHORT).show();
                                     }
-
                                 }
                             });
 

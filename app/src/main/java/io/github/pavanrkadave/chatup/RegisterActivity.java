@@ -45,7 +45,6 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-
         mAuth = FirebaseAuth.getInstance();
 
         mDisplayName = (EditText) findViewById(R.id.reg_display_name);
@@ -109,7 +108,6 @@ public class RegisterActivity extends AppCompatActivity {
                             }
                         }
                     });
-
 
                 } else {
                     mRegProgress.hide();

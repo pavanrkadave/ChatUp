@@ -57,7 +57,6 @@ public class UsersActivity extends AppCompatActivity {
                 viewHolder.setName(model.getName());
                 viewHolder.setStatus(model.getStatus());
                 viewHolder.setUserImage(model.getThumbImage(), getApplicationContext());
-
             }
         };
 
@@ -73,7 +72,6 @@ public class UsersActivity extends AppCompatActivity {
 
             mView = itemView;
         }
-
 
         public void setName(String name) {
 

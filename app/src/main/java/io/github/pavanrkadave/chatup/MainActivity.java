@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Chat Up");
         mTabLayout = (TabLayout) findViewById(R.id.main_tabs);
 
-
         //Tabs for the screen
         mViewPager = (ViewPager) findViewById(R.id.main_tabPager);
         //Setting adapter to the viewpager.
@@ -51,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
         //Setting up View pager and attaching the tablayout to it.
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
-
-
     }
 
     @Override

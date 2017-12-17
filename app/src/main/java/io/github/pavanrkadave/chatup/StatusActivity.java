@@ -33,7 +33,6 @@ public class StatusActivity extends AppCompatActivity {
     private DatabaseReference mStatusDatabase;
     private FirebaseUser mCurrentUser;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +50,6 @@ public class StatusActivity extends AppCompatActivity {
 
         String status_value = getIntent().getStringExtra("status_value");
         Log.v("Current Status", " " + status_value);
-
 
         mStatus = (EditText) findViewById(R.id.status_input);
         mStatus.setText(status_value);
@@ -84,7 +82,5 @@ public class StatusActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 }
