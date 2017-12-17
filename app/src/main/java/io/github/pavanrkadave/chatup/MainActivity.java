@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -76,19 +75,21 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
 
-        if (item.getItemId() == R.id.main_logut_button) {
-            FirebaseAuth.getInstance().signOut();
-            sendToStart();
-        }
-        if (item.getItemId() == R.id.main_settings_button) {
-            Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(settingsIntent);
-        }
-        if (item.getItemId() == R.id.main_all_button) {
-            Toast.makeText(MainActivity.this, "You Clicked All Users!", Toast.LENGTH_SHORT).show();
-        }
+        switch (item.getItemId()) {
 
-
+            case R.id.main_logut_button:
+                FirebaseAuth.getInstance().signOut();
+                sendToStart();
+                break;
+            case R.id.main_settings_button:
+                Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(settingsIntent);
+                break;
+            case R.id.main_all_button:
+                Intent userIntent = new Intent(MainActivity.this, UsersActivity.class);
+                startActivity(userIntent);
+                break;
+        }
         return true;
     }
 }
