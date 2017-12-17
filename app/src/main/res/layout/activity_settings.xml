@@ -17,7 +17,7 @@
         android:layout_below="@+id/settings_appbar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:src="@drawable/me"
+        android:src="@drawable/account"
         app:civ_border_color="@color/colorPrimary"
         app:civ_border_width="4dp" />
 
