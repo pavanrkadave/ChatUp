@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -78,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.main_logut_button) {
             FirebaseAuth.getInstance().signOut();
             sendToStart();
+        }
+        if (item.getItemId() == R.id.main_settings_button) {
+            Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(settingsIntent);
+        }
+        if (item.getItemId() == R.id.main_all_button) {
+            Toast.makeText(MainActivity.this, "You Clicked All Users!", Toast.LENGTH_SHORT).show();
         }
 
 
