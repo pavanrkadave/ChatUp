@@ -79,13 +79,10 @@ public class SettingsActivity extends AppCompatActivity {
                 mName.setText(name);
                 mStatus.setText(status);
                 Picasso.with(SettingsActivity.this).load(image).into(mDisplayImage);
-
-
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
 
@@ -164,6 +161,5 @@ public class SettingsActivity extends AppCompatActivity {
                 Toast.makeText(SettingsActivity.this, String.valueOf(error), Toast.LENGTH_SHORT).show();
             }
         }
-
     }
 }
