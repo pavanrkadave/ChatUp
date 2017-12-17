@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     tools:context="io.github.pavanrkadave.chatup.RequestsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Welcome to Requests" />
+        android:gravity="center"
+        android:text="@string/placeholder_requests_page"
+        android:textSize="@dimen/defaulttextSize" />
 
 </FrameLayout>

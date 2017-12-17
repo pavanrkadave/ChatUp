@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     tools:context="io.github.pavanrkadave.chatup.ChatsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Welcome to Chats Page" />
+        android:gravity="center"
+        android:text="@string/place_holder_chat_fragment"
+        android:textSize="@dimen/defaulttextSize" />
 
 </FrameLayout>

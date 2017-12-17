@@ -21,9 +21,9 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_list_image"
                 android:layout_width="54dp"
-                android:src="@drawable/account"
                 android:layout_height="54dp"
-                android:layout_margin="8dp" />
+                android:layout_margin="8dp"
+                android:src="@drawable/account" />
 
             <TextView
                 android:id="@+id/user_list_name"
@@ -32,7 +32,7 @@
                 android:layout_alignTop="@+id/user_list_image"
                 android:layout_margin="4dp"
                 android:layout_toEndOf="@+id/user_list_image"
-                android:text="Display Name"
+                android:text="@string/placeholder_name"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -44,7 +44,7 @@
                 android:layout_below="@+id/user_list_name"
                 android:layout_margin="4dp"
                 android:layout_toEndOf="@+id/user_list_image"
-                android:text="Hi There! I'm using ChatUp!"
+                android:text="@string/placeholder_status"
                 android:textColor="@color/colorAccent" />
 
         </RelativeLayout>

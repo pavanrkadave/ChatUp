@@ -28,7 +28,7 @@
         android:layout_below="@+id/settings_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Display Name"
+        android:text="@string/placeholder_name"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -40,7 +40,7 @@
         android:layout_below="@+id/settings_display_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="Hey there! I'm using ChatUp !"
+        android:text="@string/placeholder_status"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp" />

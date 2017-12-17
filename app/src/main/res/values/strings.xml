@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ChatUp</string>
     <string name="need_account_string">Need a New Account?</string>
-    <string name="display_name">Display Name</string>
+    <string name="placeholder_name">Display Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="create_account">Create Account</string>
@@ -9,7 +9,11 @@
     <string name="welcome_to_chatup">Welcome To ChatUp</string>
     <string name="already_have_account_sign_in">Already Have Account? Sign In!</string>
     <string name="login">Login</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_to_your_account">Login To Your Account</string>
+    <string name="create_a_new_account">Create A New Account</string>
+    <string name="placeholder_status">Hey there! I\'m using ChatUp !</string>
+    <string name="change_status">Change Status</string>
+    <string name="place_holder_chat_fragment">Welcome to Chats Page</string>
+    <string name="placeholder_requests_page">Welcome to Requests Page</string>
+    <string name="placeholder_friends_fragment">Welcome to Friends Page</string>
 </resources>
