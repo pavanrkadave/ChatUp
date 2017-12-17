@@ -97,13 +97,20 @@ public class RegisterActivity extends AppCompatActivity {
                     userMap.put("image", "default");
                     userMap.put("thumb_image", "default");
 
-                    mDatabase.setValue(userMap);
+                    mDatabase.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                mRegProgress.dismiss();
+                                Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
+                                mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(mainIntent);
+                                finish();
+                            }
+                        }
+                    });
 
-                    mRegProgress.dismiss();
-                    Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
-                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(mainIntent);
-                    finish();
+
                 } else {
                     mRegProgress.hide();
                     Toast.makeText(RegisterActivity.this, "Authentication Failed!" + String.valueOf(task), Toast.LENGTH_SHORT).show();
