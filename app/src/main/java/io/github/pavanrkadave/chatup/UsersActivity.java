@@ -1,5 +1,6 @@
 package io.github.pavanrkadave.chatup;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,9 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UsersActivity extends AppCompatActivity {
 
@@ -52,7 +56,7 @@ public class UsersActivity extends AppCompatActivity {
 
                 viewHolder.setName(model.getName());
                 viewHolder.setStatus(model.getStatus());
-
+                viewHolder.setUserImage(model.getThumbImage(), getApplicationContext());
 
             }
         };
@@ -80,6 +84,11 @@ public class UsersActivity extends AppCompatActivity {
         public void setStatus(String status) {
             TextView userStatusView = mView.findViewById(R.id.user_list_status);
             userStatusView.setText(status);
+        }
+
+        public void setUserImage(String thumb_image, Context context) {
+            CircleImageView userImageView = mView.findViewById(R.id.user_list_image);
+            Picasso.with(context).load(thumb_image).placeholder(R.drawable.account).into(userImageView);
         }
     }
 }
