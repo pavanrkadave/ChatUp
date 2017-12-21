@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -66,6 +67,10 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileSendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mProfileSendRequest.setEnabled(false);
+
+
+                //--------------------Not Friends State---------------------------------------------
 
                 if (mCurrent_state.equals("not_friends")) {
 
@@ -82,6 +87,9 @@ public class ProfileActivity extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(ProfileActivity.this, "Successfully Sent Request!",
                                                 Toast.LENGTH_SHORT).show();
+                                        mProfileSendRequest.setEnabled(true);
+                                        mCurrent_state = "request_sent";
+                                        mProfileSendRequest.setText("Cancel Request");
                                     }
                                 });
 
@@ -89,6 +97,26 @@ public class ProfileActivity extends AppCompatActivity {
                                 Toast.makeText(ProfileActivity.this, "Failed Sending Request",
                                         Toast.LENGTH_SHORT).show();
                             }
+                        }
+                    });
+                }
+
+                //---------------------------------Cancel Request State-----------------------
+
+                if (mCurrent_state.equals("request_sent")) {
+                    mFriendReqDatabase.child(mCurrentUser.getUid()).child(user_id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                            mFriendReqDatabase.child(user_id).child(mCurrentUser.getUid()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+
+                                    mProfileSendRequest.setEnabled(true);
+                                    mCurrent_state = "not_friends";
+                                    mProfileSendRequest.setText("Send Friend Request");
+                                }
+                            });
                         }
                     });
 
