@@ -29,7 +29,6 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mProfileName, mProfileStatus, mProfileFriendsCount;
     private Button mProfileSendRequest, mProfleDeclineBtn;
 
-
     private ProgressDialog mProgressDialog;
 
     private DatabaseReference mUsersDatabase;
@@ -37,7 +36,6 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser mCurrentUser;
 
     private String mCurrent_state;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,9 +117,7 @@ public class ProfileActivity extends AppCompatActivity {
                             });
                         }
                     });
-
                 }
-
             }
         });
 
@@ -137,7 +133,37 @@ public class ProfileActivity extends AppCompatActivity {
                 mProfileStatus.setText(status);
                 mProfileFriendsCount.setText("Total Friends : 0  |  Mutual Friends : 0 ");
                 Picasso.with(ProfileActivity.this).load(image).placeholder(R.drawable.account).into(mProfileImg);
-                mProgressDialog.dismiss();
+
+
+                //-------Friends List/Request Feature---------
+                mFriendReqDatabase.child(mCurrentUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        if (dataSnapshot.hasChild(user_id)) {
+                            String req_type = dataSnapshot.child(user_id).child("request_type").getValue().toString();
+
+                            if (req_type.equals("received")) {
+
+                                mProfileSendRequest.setEnabled(true);
+                                mCurrent_state = "req_received";
+                                mProfileSendRequest.setText("Accept Friend Request");
+
+                            } else if (req_type.equals("sent")) {
+
+                                mCurrent_state = "req_sent";
+                                mProfileSendRequest.setText("Cancel Friend Request");
+
+                            }
+                        }
+                        mProgressDialog.dismiss();
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
 
             }
 
